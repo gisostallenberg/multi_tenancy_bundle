@@ -47,6 +47,7 @@
 
         <service id="Hakam\MultiTenancyBundle\EventListener\DbSwitchEventListener">
             <tag name="kernel.event_listener" event="Hakam\MultiTenancyBundle\Event\SwitchDbEvent" method="onSwitchDb"/>
+            <tag name="kernel.reset" method="reset"/>
             <argument type="service" id="Hakam\MultiTenancyBundle\Doctrine\DBAL\TenantConnectionSwitcher"/>
             <argument type="service" id="Hakam\MultiTenancyBundle\Port\TenantConfigProviderInterface"/>
             <argument type="service" id="tenant_entity_manager"/>
